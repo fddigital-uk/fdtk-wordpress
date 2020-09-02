@@ -7,17 +7,17 @@ import {
 
 export default (props) => {
   const {
-    attributes: { fullWidthAlignment },
+    attributes: { contentAlign, position },
     setAttributes,
   } = props;
   return [
     <BlockControls key="controls">
       <AlignmentToolbar
-        value={fullWidthAlignment}
-        onChange={(value) => setAttributes({ fullWidthAlignment: value })}
+        value={contentAlign}
+        onChange={(value) => setAttributes({ contentAlign: value })}
       />
     </BlockControls>,
-    <FullWidth fullWidthAlignment={"center"}>
+    <FullWidth contentAlign={contentAlign} position={position}>
       <InnerBlocks />
     </FullWidth>,
   ];

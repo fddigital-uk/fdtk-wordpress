@@ -1,1 +1,2 @@
-import "./fullwidth"
+import "./fullwidth";
+import "./extensions"
