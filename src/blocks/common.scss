@@ -1,0 +1,16 @@
+.fdtk-align {
+  &-center {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &-left {
+    justify-content: start;
+    text-align: left;
+  }
+
+  &-right {
+    justify-content: end;
+    text-align: right;
+  }
+}

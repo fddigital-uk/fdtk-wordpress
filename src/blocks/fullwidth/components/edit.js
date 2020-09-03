@@ -2,13 +2,13 @@ import FullWidth from "./fullWidth";
 import {
   BlockControls,
   AlignmentToolbar,
-  InnerBlocks,
+  InnerBlocks
 } from "@wordpress/block-editor";
 
 export default (props) => {
   const {
     attributes: { contentAlign, position },
-    setAttributes,
+    setAttributes
   } = props;
   return [
     <BlockControls key="controls">
@@ -19,6 +19,6 @@ export default (props) => {
     </BlockControls>,
     <FullWidth contentAlign={contentAlign} position={position}>
       <InnerBlocks />
-    </FullWidth>,
+    </FullWidth>
   ];
 };

@@ -1,2 +1,2 @@
 import "./fullwidth";
-import "./extensions"
+import "./addToCart";
