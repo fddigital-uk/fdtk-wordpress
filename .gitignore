@@ -20,3 +20,5 @@ composer.lock
 dist/blocks.build.js
 dist/blocks.editor.build.css
 dist/blcoks.style.build.css
+
+build/

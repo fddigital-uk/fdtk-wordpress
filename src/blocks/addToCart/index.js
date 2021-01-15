@@ -5,7 +5,7 @@
 import Edit from "./components/edit";
 import AddToCart from "./components/addToCart";
 
-import "./styles/styles.scss"
+import "./styles/style.scss"
 
 wp.blocks.registerBlockType("fractaldimensions/add-to-cart-block", {
   title: "Add to Cart Button Block",
@@ -13,7 +13,7 @@ wp.blocks.registerBlockType("fractaldimensions/add-to-cart-block", {
   category: "common",
   attributes: {
     productId: { type: "number" },
-    customText: { type: "string" },
+    text: { type: "string" },
     contentAlign: { type: "string" }
   },
   support: {

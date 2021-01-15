@@ -2,20 +2,17 @@ const { Component } = wp.element;
 
 const classNames = require("classnames");
 
-export default class FullWidth extends Component {
-  render() {
-    const { contentAlign = "", position } = this.props;
+export default (props) => {
+  const { contentAlign = "", color } = props;
+  const contentClass = classNames([
+    { "fdtk-fullwidth": true },
+    { [`fdtk-align-${contentAlign}`]: contentAlign !== "" },
+    { [`align${contentAlign}`]: contentAlign !== "" }
+  ]);
 
-    const contentClass = classNames([
-      { "fdtk-fullwidth": true },
-      { [`fdtk-align-${contentAlign}`]: contentAlign !== "" },
-      { [`align${position}`]: position !== "" },
-    ]);
-
-    return (
-      <div class={contentClass}>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+  return (
+    <div className={contentClass} style={color && color !== "" ? { backgroundColor: color } : {}}>
+      {props.children}
+    </div>
+  );
+};

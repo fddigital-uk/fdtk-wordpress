@@ -1,2 +1,0 @@
-import "./fullwidth";
-import "./addToCart";

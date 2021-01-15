@@ -1,7 +1,7 @@
 module.exports = {
     "presets": [
         [
-            '@wordpress/default',
+            '@wordpress/babel-preset-default',
         ],
         [
             "@babel/env",

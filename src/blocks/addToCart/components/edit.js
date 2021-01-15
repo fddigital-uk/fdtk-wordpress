@@ -7,11 +7,11 @@ import {
   InspectorControls
 } from "@wordpress/block-editor";
 import { TextControl, PanelBody } from "@wordpress/components";
-import {__} from "@wordpress/i18n";
+import { __ } from "@wordpress/i18n";
 
 export default (props) => {
   const {
-    attributes: { contentAlign, customText, productId},
+    attributes: { contentAlign, text, productId },
     setAttributes
   } = props;
 
@@ -28,13 +28,13 @@ export default (props) => {
         initialOpen={false}>
         <TextControl
           label={__("Custom Text")}
-          onChange={value => setAttributes({ customText: value })}
+          onChange={value => setAttributes({ text: value })}
         />
       </PanelBody>
     </InspectorControls>,
     <AddToCart
       productId={32}
-      text={!customText || customText == '' ? undefined : customText}
+      text={!text || text == "" ? undefined : text}
       contentAlign={contentAlign}
     />
   ];

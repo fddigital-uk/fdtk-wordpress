@@ -7,7 +7,7 @@ export default (props) => {
 
   return (
     <div className={classnames("fdtk-addtocart__wrap", `fdtk-align-${contentAlign}`)}>
-      <button className="button fdtk-addtocart">
+      <button className="button fdtk-addtocart" onClick={`window.location.href = '?add-to-cart=${productId}'`}>
         {text}
       </button>
     </div>
