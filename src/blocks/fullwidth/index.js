@@ -5,32 +5,34 @@
 /* This section of the code registers a new block, sets an icon and a category, and indicates what type of fields it'll include. */
 
 import Edit from "./components/edit";
-import { InnerBlocks } from "@wordpress/block-editor";
+import {InnerBlocks} from "@wordpress/block-editor";
 import FullWidth from "./components/fullWidth";
 
 import "./styles/editor.scss";
 import "./styles/style.scss";
 
 wp.blocks.registerBlockType("fractaldimensions/fullwidth-block", {
-  title: "Full Width Colour Block",
-  icon: "smiley",
-  category: "common",
-  attributes: {
-    contentAlign: { type: "string" },
-    color: { type: "string" }
-  },
-  supports: {
-    align: ["full"],
-    default: "full"
-  },
+    title: "Full Width Colour Block",
+    icon: "smiley",
+    category: "common",
+    attributes: {
+        contentAlign: {type: "string", default: "center"},
+        color: {type: "string", default: "one"},
+        align: {type: 'string', default: "full"},
+        hasInner: {type: "boolean", default: false}
+    },
+    supports: {
+        align: ["full"],
+        default: "full"
+    },
 
-  /* This configures how the content and color fields will work, and sets up the necessary elements */
+    /* This configures how the content and color fields will work, and sets up the necessary elements */
 
-  edit: function(props) {
-    return <Edit {...props} />;
-  },
-  save: function(props) {
-    return <FullWidth {...props.attributes}><InnerBlocks.Content /></FullWidth>;
-  }
+    edit: function (props) {
+        return <Edit {...props} />;
+    },
+    save: function (props) {
+        return <FullWidth {...props.attributes}><InnerBlocks.Content/></FullWidth>;
+    }
 });
 

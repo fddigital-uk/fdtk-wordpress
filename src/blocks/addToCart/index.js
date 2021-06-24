@@ -23,6 +23,7 @@ wp.blocks.registerBlockType("fractaldimensions/add-to-cart-block", {
     return <Edit {...props} />;
   },
   save: function(props) {
-    return <AddToCart {...props.attributes} />;
+    const post_id = wp.data.select("core/editor").getCurrentPostId();
+    return <AddToCart {...props.attributes} productId={post_id} />;
   }
 });

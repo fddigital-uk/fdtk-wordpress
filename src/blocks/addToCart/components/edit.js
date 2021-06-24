@@ -3,7 +3,6 @@ import AddToCart from "./addToCart";
 import {
     BlockControls,
     AlignmentToolbar,
-    InnerBlocks,
     InspectorControls
 } from "@wordpress/block-editor";
 import {TextControl, PanelBody} from "@wordpress/components";
@@ -14,10 +13,7 @@ export default (props) => {
         attributes: {contentAlign, text},
         setAttributes
     } = props;
-    const {useSelect} = wp.data;
-    const post_id = useSelect(select =>
-        select("core/block-editor").getCurrentPostId()
-    );
+    const post_id = wp.data.select("core/editor").getCurrentPostId();
 
     return [
         <BlockControls key="controls">
