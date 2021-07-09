@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "wp-scripts start",
-    "build": "wp-scripts build"
+    "build-wp": "wp-scripts build",
+    "build": "gulp build"
   },
   "author": "Nick Taylor - Fractl Dimensions Ltd.",
   "license": "MIT",
@@ -23,15 +24,20 @@
     "@wordpress/scripts": "^16.0.0",
     "classnames": "^2.3.1",
     "css-loader": "^5.2.4",
+    "del": "^6.0.0",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
+    "gulp": "^4.0.2",
+    "gulp-run-command": "0.0.10",
+    "gulp-zip": "^5.1.0",
     "mini-css-extract-plugin": "^1.6.0",
     "postcss-loader": "^5.3.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.3.0",
     "sass-loader": "^11.1.1",
     "webpack-bundle-analyzer": "^4.4.2",
-    "webpack-livereload-plugin": "^3.0.1"
+    "webpack-livereload-plugin": "^3.0.1",
+    "yargs": "^17.0.1"
   },
   "dependencies": {
     "@wordpress/postcss-plugins-preset": "^3.0.1",

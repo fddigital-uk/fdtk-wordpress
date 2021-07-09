@@ -1,15 +1,18 @@
 .fdtk-align {
   &-center {
+    display: flex;
     justify-content: center;
     text-align: center;
   }
 
   &-left {
+    display: flex;
     justify-content: start;
     text-align: left;
   }
 
   &-right {
+    display: flex;
     justify-content: end;
     text-align: right;
   }

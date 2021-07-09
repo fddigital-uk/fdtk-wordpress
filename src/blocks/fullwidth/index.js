@@ -2,8 +2,6 @@
  * BLOCK: Full Width Block
  */
 
-/* This section of the code registers a new block, sets an icon and a category, and indicates what type of fields it'll include. */
-
 import Edit from "./components/edit";
 import {InnerBlocks} from "@wordpress/block-editor";
 import FullWidth from "./components/fullWidth";
@@ -14,9 +12,9 @@ import "./styles/style.scss";
 wp.blocks.registerBlockType("fractaldimensions/fullwidth-block", {
     title: "Full Width Colour Block",
     icon: "smiley",
-    category: "common",
+    category: "fractaldimensions",
     attributes: {
-        contentAlign: {type: "string", default: "center"},
+        contentAlign: {type: "string", default: "left"},
         color: {type: "string", default: "one"},
         align: {type: 'string', default: "full"},
         hasInner: {type: "boolean", default: false}

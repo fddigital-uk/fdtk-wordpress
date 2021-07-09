@@ -1,0 +1,30 @@
+.image-list {
+  &__modal {
+    &__list {
+      margin: 0;
+      padding: 0;
+
+      & > *:not(:first-child) {
+        border-top: 2px solid #ccc;
+      }
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: 50px 150px auto 100px;
+      grid-gap: 30px;
+      padding: 20px 0;
+
+      & > * {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+      }
+    }
+  }
+}

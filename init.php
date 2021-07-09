@@ -37,3 +37,15 @@ function fd_toolkit_editor_assets()
 }
 
 add_action('enqueue_block_editor_assets', 'fd_toolkit_editor_assets');
+
+add_filter('block_categories', function ($categories, $post) {
+    return array_merge(
+        $categories,
+        array(
+            array(
+                'slug' => 'fractaldimensions',
+                'title' => 'Fractal Dimensions',
+            ),
+        )
+    );
+}, 10, 2);

@@ -11,16 +11,15 @@ const HasWrap = (props) => {
 }
 
 export default (props) => {
-    const {contentAlign = "", color, key = "fdtk-fwb", hasInner = false} = props;
+    const {contentAlign = "", color, hasInner = false} = props;
     const contentClass = classNames([
         {"fullwidth-block": true},
         {[`fdtk-align-${contentAlign}`]: contentAlign !== ""},
-        {[`align${contentAlign}`]: contentAlign !== ""},
         {[`fullwidth-block--${color}`]: true}
     ]);
 
     return (
-        <div className={contentClass} key={key}>
+        <div className={contentClass}>
             <HasWrap wrap={hasInner}>
                 {props.children}
             </HasWrap>

@@ -38,11 +38,11 @@ export default (props) => {
                     onChange={(value) => setAttributes({hasInner: value})}
                 />
                 <ul className={`fwb-color-list ${hasInner ? 'inner' : ''}`}>
-                    {['none', 'one', 'one-light', 'one-dark', 'two'].map(c => <ColorListItem selected={color} color={c} onClick={(value) => setAttributes({color: value})} />)}
+                    {['none', 'one', 'one-light', 'one-dark', 'two'].map(c => <ColorListItem key={c} selected={color} color={c} onClick={(value) => setAttributes({color: value})} />)}
                 </ul>
             </PanelBody>
         </InspectorControls>,
-        <FullWidth {...props.attributes}>
+        <FullWidth {...props.attributes} key={props.clientId}>
             <InnerBlocks/>
         </FullWidth>
     ];
