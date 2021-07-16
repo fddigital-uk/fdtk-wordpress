@@ -27,7 +27,7 @@ export default (props) => {
                 onChange={(value) => setAttributes({contentAlign: value})}
             />
         </BlockControls>,
-        <InspectorControls>
+        <InspectorControls key="inspector-controls">
             <PanelBody
                 title={__("Style")}
                 initialOpen={true}>

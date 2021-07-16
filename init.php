@@ -9,8 +9,17 @@ function fd_toolkit_block_assets()
         filemtime(plugin_dir_path(__FILE__) . 'build/style-index.css')
     );
 
+    wp_enqueue_script(
+        'fd-toolkit-blocks-client-script',
+        plugin_dir_url(__FILE__) . "build/client.js",
+        array('wp-block-editor', 'wp-components', 'wp-element', 'wp-i18n', 'wp-polyfill'),
+        filemtime(plugin_dir_path(__FILE__) . "build/client.js"),
+        true
+    );
+
     register_block_type('fractaldimensions/fullwidth-block', array(
         'style' => 'fd-toolkit-blocks-style-css',
+        'script' => 'fd-toolkit-blocks-client-script',
         'editor_style' => 'fd-toolkit-blocks-editor-css',
         'editor_script' => 'fd-toolkit-blocks',
     ));

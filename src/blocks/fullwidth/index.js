@@ -27,7 +27,7 @@ wp.blocks.registerBlockType("fractaldimensions/fullwidth-block", {
     /* This configures how the content and color fields will work, and sets up the necessary elements */
 
     edit: function (props) {
-        return <Edit {...props} />;
+        return <Edit key={props.clientId} {...props} />;
     },
     save: function (props) {
         return <FullWidth {...props.attributes}><InnerBlocks.Content/></FullWidth>;

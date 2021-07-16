@@ -23,7 +23,7 @@ export default (props) => {
                 onChange={value => setAttributes({contentAlign: value})}
             />
         </BlockControls>,
-        <InspectorControls>
+        <InspectorControls key="inspector-controls">
             <PanelBody
                 title={__("Options")}
                 initialOpen={false}>
@@ -47,6 +47,7 @@ export default (props) => {
             </PanelBody>
         </InspectorControls>,
         <AddToCart
+            key="add-to-cart"
             productId={post_id}
             text={!text || text == "" ? undefined : text}
             size={size}

@@ -2,6 +2,7 @@
  * BLOCK: Add to cart button
  */
 
+import "./styles/editor.scss";
 import Edit from "./components/edit";
 import AddToCart from "./components/addToCart";
 
