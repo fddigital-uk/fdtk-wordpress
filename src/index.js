@@ -1,6 +1,7 @@
 import "./blocks/fullwidth";
 import "./blocks/addToCart";
 import "./blocks/imageList";
+import "./blocks/salesProductList";
 
 document.addEventListener("DOMContentLoaded", () => {
     const script = document.createElement('script');

@@ -1,4 +1,5 @@
 vendor/
+temp/
 dist/
 *.diff
 *.err

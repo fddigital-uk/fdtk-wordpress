@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev",
     "start": "wp-scripts start src/index.js src/client.js",
     "build-wp": "wp-scripts build",
     "build": "gulp build"
@@ -22,12 +23,14 @@
     "@wordpress/hooks": "^3.0.0",
     "@wordpress/i18n": "^4.0.0",
     "@wordpress/scripts": "^16.0.0",
+    "browser-sync": "^2.27.4",
     "classnames": "^2.3.1",
     "css-loader": "^5.2.4",
     "del": "^6.0.0",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
     "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-run-command": "0.0.10",
     "gulp-zip": "^5.1.0",
     "mini-css-extract-plugin": "^1.6.0",

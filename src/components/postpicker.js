@@ -24,7 +24,7 @@ function PostPickerControl({type, selected, onChange}) {
         if (results) {
             setFilteredOptions(results.map(m => ({
                 value: m.id,
-                label: m.title.raw
+                label: m.title.raw == null ? m.title.rendered : m.title.raw
             })));
         }
     }, [results])

@@ -42,8 +42,11 @@ export default (props) => {
                     ]}
                     onChange={(v) => setAttributes({size: v})}
                 />
-                <PostPickerControl type={'product'} selected={productId}
-                                   onChange={(id) => setAttributes({productId: id})}/>
+                <PostPickerControl
+                    type={'product'}
+                    selected={productId}
+                    onChange={(id) => setAttributes({productId: id})}
+                />
             </PanelBody>
         </InspectorControls>,
         <AddToCart
