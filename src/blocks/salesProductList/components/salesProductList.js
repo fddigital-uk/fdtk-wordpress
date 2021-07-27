@@ -1,45 +1,26 @@
-import classnames from "classnames";
-import {useSelect} from '@wordpress/data';
-
 const SalesProduct = props => {
     const {
-        productId
+        id,
+        title,
+        intro,
+        short_description: shortDesc,
+        included,
+        image,
+        children,
     } = props;
 
-    let product = useSelect((select) => {
-        return select('core').getEntityRecord('postType', 'product', productId)
-    })
-    //console.dir(product);
-    // useEffect(() => {
-    //     console.log("But this is working");
-    // })
-
     return <article className="prodlist">
-        <div className="prodlist__image">
+        <div className="prodlist__image" dangerouslySetInnerHTML={{__html: image}}>
+
         </div>
         <div className="prodlist__content">
-            <h1>Copy My Copy</h1>
+            <h1>{title}</h1>
             <section>
-                <p className="prodlist__subhead">
-                    A variety of my most effective charming copy templates - and the crafty tactics, formulas,
-                    devices,
-                    and little nuances that make them so successful.
+                <p className="prodlist__subhead" dangerouslySetInnerHTML={{__html: intro}}>
                 </p>
-                <p>Imagine being able to write your own stand out, disarming copy that enables you to open
-                    opportunities
-                    for yourself whenever you want - and achieve whatever your heart (or bank account)
-                    desires.</p>
-                <p>Well, there's no need to merely daydream. I'm giving you the exact copy templates to be able
-                    to
-                    do
-                    all of these things - and more.</p>
-                <p>You'll not only get the templates, you'll get a line-by-line breakdown of every tactic,
-                    device,
-                    formula, and nuance contained in my unorthodox, impressive, persuasive, disarming, effective
-                    copy
-                    templates.</p>
+                <div className="prodlist__copy" dangerouslySetInnerHTML={{__html: shortDesc}}></div>
             </section>
-            <section className="prodlist__included hidden">
+            {included !== null && <section className="prodlist__included prodlist__included--hidden">
                 <button className="prodlist__button">
                     See what's included
                     <div className="prodlist__button-caret">
@@ -52,26 +33,25 @@ const SalesProduct = props => {
                         </svg>
                     </div>
                 </button>
-                <div className="prodlist__included-content">
-                    <ul>
-                        <li>Email templates to send to their existing customers.</li>
-                        <li>Email templates to send to their existing customers.</li>
-                        <li>Email templates to send to their existing customers.</li>
-                        <li>Email templates to send to their existing customers.</li>
-                    </ul>
+                <div className="prodlist__included-content" dangerouslySetInnerHTML={{__html: included}}>
                 </div>
-            </section>
+            </section>}
+
         </div>
+        {children}
     </article>
 }
 
 const SalesProductList = props => {
     const {
-        products
+        products,
+        controls: AdminControls,
+        controlsCallback
     } = props;
 
-    return <div className="spl">
-        {products && products.map(p => <SalesProduct key={p} productId={p} />)}
+    return <div className="prodlist__container">
+        {products && products.map((p, i) => <SalesProduct key={p.id} {...p}>{AdminControls !== null &&
+        <AdminControls callback={controlsCallback} index={i} {...p}/>}</SalesProduct>)}
     </div>
 };
 

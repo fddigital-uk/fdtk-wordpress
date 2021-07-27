@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     products.forEach(button => {
         button.addEventListener('click', () => {
-            button.parentElement.classList.toggle('hidden');
+            button.parentElement.classList.toggle('prodlist__included--hidden');
         });
     })
 });

@@ -7,6 +7,12 @@
     font-size: 2em;
   }
 
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+
   &__content {
     > *:not(:first-child) {
       margin-top: 20px;
@@ -56,7 +62,7 @@
     }
   }
 
-  &__included.hidden {
+  &__included--hidden {
     .prodlist__included-content {
       display: none;
     }
