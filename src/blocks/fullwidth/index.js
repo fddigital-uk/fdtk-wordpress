@@ -10,7 +10,7 @@ import "./styles/editor.scss";
 import "./styles/style.scss";
 
 wp.blocks.registerBlockType("fractaldimensions/fullwidth-block", {
-    title: "Full Width Colour Block",
+    title: "FD - Full Width Colour",
     icon: "smiley",
     category: "fractaldimensions",
     attributes: {

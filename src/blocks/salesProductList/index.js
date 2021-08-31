@@ -5,7 +5,7 @@ import EditSalesProductList from "./components/edit";
 import SalesProductList from "./components/salesProductList";
 
 wp.blocks.registerBlockType("fractaldimensions/sales-product-list", {
-    title: "Sales Product List",
+    title: "FD - Sales Product List",
     icon: "store",
     category: "fractaldimensions",
     attributes: {

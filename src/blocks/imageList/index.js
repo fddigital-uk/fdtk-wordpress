@@ -8,7 +8,7 @@ import EditImageList from "./components/edit";
 import ImageList from "./components/imageList";
 
 wp.blocks.registerBlockType("fractaldimensions/image-list", {
-    title: "Image List (Continuous)",
+    title: "FD - Image List (Continuous)",
     icon: "images-alt2",
     category: "fractaldimensions",
     attributes: {

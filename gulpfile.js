@@ -3,7 +3,6 @@ const gulp = require('gulp');
 const del = require('del');
 const zip = require('gulp-zip');
 const run = require('gulp-run-command').default;
-const concat = require('gulp-concat');
 const browserSync = require('browser-sync');
 
 const port = argv.port || 3000;
@@ -58,12 +57,12 @@ function browserSyncTask() {
 }
 
 function watchFiles() {
-    gulp.watch('build/**/*.css').on('all', () => browserSync.reload("*.css"));
+    gulp.watch(['build/**/*.css', '../../themes/focusblog-child/style.css']).on('all', () => browserSync.reload("*.css"));
     gulp.watch('build/**/*.js').on('all', () => browserSync.reload("*.js"));
     gulp.watch('./*.html', cb => {
         browserSync.reload();
         cb();
-    })
+    });
 }
 
 gulp.task('dev', gulp.series(

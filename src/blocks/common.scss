@@ -17,3 +17,23 @@
     text-align: right;
   }
 }
+
+.wp-block.is-reusable {
+  border: 0px dashed pink;
+}
+
+.block-library-block__reusable-block-container {
+  pointer-events: none;
+}
+
+@media (max-width: 782px) {
+  .wp-block-columns .wp-block-column {
+    margin-bottom: 2em !important;
+  }
+}
+
+@media (max-width: 782px) and (min-width: 600px) {
+  .wp-block-columns .wp-block-column:nth-child(2n) {
+    margin-left: 0 !important;
+  }
+}

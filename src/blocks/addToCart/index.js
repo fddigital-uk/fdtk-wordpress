@@ -9,7 +9,7 @@ import AddToCart from "./components/addToCart";
 import "./styles/style.scss"
 
 wp.blocks.registerBlockType("fractaldimensions/add-to-cart-block", {
-    title: "Add to Cart Button Block",
+    title: "FD - Add to Cart Button",
     icon: "cart",
     category: "common",
     attributes: {

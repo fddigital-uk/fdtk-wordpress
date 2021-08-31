@@ -1,0 +1,43 @@
+.fdtk-quote {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+
+  h1, h2, h3, h4, h5 {
+    font-size: 1.75em;
+  }
+
+  &__image {
+    text-align: center;
+
+    img {
+        max-width: 200px;
+    }
+
+    figcaption {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+
+  &__content {
+    > *:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .fdtk-quote {
+    grid-template-columns: 1fr 3fr;
+    &__image {
+      text-align: left;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

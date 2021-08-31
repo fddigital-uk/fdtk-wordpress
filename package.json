@@ -10,7 +10,7 @@
     "build-wp": "wp-scripts build src/index.js src/client.js",
     "build": "gulp build"
   },
-  "author": "Nick Taylor - Fractl Dimensions Ltd.",
+  "author": "Nick Taylor - Fractal Dimensions Ltd.",
   "license": "MIT",
   "devDependencies": {
     "@wordpress/babel-preset-default": "^6.3.0",

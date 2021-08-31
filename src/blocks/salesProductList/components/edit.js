@@ -27,7 +27,9 @@ const SalesProductListAdminControl = props => {
                 </svg>
             </button>
             -
-            <button className="button" onClick={() => callback('delete', index)}>Remove</button>
+            <a href={`post.php?post=${id}&action=edit`} target="_blank" className="button">Edit Product</a>
+            -
+            <button className="button components-button is-destructive" onClick={() => callback('delete', index)}>Remove</button>
         </div>
     </div>
 }

@@ -10,6 +10,15 @@
     bottom: 0;
     padding: 10px;
 
+    .components-button {
+      height: auto;
+      padding: revert;
+
+      &.is-destructive {
+        border-color: #cc1818;
+      }
+    }
+
     &-inner {
       background-color: white;
       border-radius: 10px;
